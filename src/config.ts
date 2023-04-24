@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
 
 export const octokit = new Octokit({
-  auth: "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",
+  auth: "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",
 });
