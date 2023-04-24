@@ -22,22 +22,22 @@ const KanbanItem = ({ data, index }: KanbanItemProps) => {
           placeholder={data.title}
         >
           <Row>
-            <Col span={6}>
+            <Col xxl={6} sm={24}>
               <span>#{data.id}</span>
             </Col>
-            <Col span={16} offset={2}>
+            <Col xxl={{ span: 16, offset: 2 }} sm={24}>
               <span>Opened {moment(data.created_at).fromNow()}</span>
             </Col>
           </Row>
           <Row>
-            <Col span={6}>
+            <Col xxl={6}>
               {data.user ? (
                 <span>{data.user.login}</span>
               ) : (
                 <span>Unknown</span>
               )}
             </Col>
-            <Col span={16} offset={2}>
+            <Col xxl={{ span: 16, offset: 2 }} sm={24}>
               <span>Comments: {data.comments}</span>
             </Col>
           </Row>
