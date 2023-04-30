@@ -129,7 +129,7 @@ export const issuesSlice = createSlice({
       })
       .addCase(loadIssues.rejected, (state, action) => {
         state.status = "rejected";
-        state.error = action.error.name || "Cannot load data";
+        state.error = action.error.name || "Cannot load data or you didn't pass your personal token (check readme file)";
       })
       .addCase(loadIssues.fulfilled, (state, action) => {
         state.status = "received";
